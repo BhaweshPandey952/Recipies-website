@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  overflow-x: none;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+nav {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+#navList {
+  /* to remove the circle in list items */
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navContainer {
+  width: 100vw;
+
+  /* this gradient color i have got online see bookmarks for website*/
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+
+  height: 50px;
+}
+
+#navLogo {
+  font-size: 2rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* to increase the spacing b/w the home ,contact and about us we use flex */
+/* flex is used because it make our design responsive */
+.navItems {
+  display: flex;
+  gap: 20px;
+}
+
+.footerBox {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  width: 100%; /* 100% of parent which is .container */
+  text-align: center;
+  min-height: 39px;
+}
+
+.footerBox p {
+  color: white;
+  font-size: 1rem;
+}
+
+.contentBox {
+  width: 60%;
+  margin: auto; /* by this the content comes in center */
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px black;
+
+  /* to make spacing b/w items */
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
+  padding: 3rem;
+}
+
+/* to get the left box and right box side by side in a row */
+.item {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.rightBox {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease-in-out 0s;
+  box-shadow: 3px 3px 13px black;
+  border-radius: 20px;
+}
+
+.rightBox:hover {
+  transform: scale(1.06);
+}
+
+/* to resize images  */
+.rightBox img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.leftBox {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 3%;
+  color: #000066;
+}
+
+.leftBox h2 {
+  font-size: 1.8rem;
+}
+
+.ingredientBox {
+  font-size: 1rem;
+}
+
+.prepBox {
+  font-size: 1rem;
+}
+
+.rightBox .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(64, 63, 63, 0.712);
+  border-radius: 20px;
+
+  /* to make the click here to buy at center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+
+  /* initailly putting overlay hidden using the below thing and making it visible when hovered over image */
+  opacity: 0;
+
+  /*  for smothness of overlay add transition  */
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.rightBox:hover .overlay {
+  opacity: 1;
+}
